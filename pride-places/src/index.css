@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#posts-ul {
+  position: absolute;
+  margin-top: -34%;
+  margin-left: -11%; 
+}
+
+/* #modal {
+  position: absolute;
+  z-index: 2;
+} */
+
+p {
+  text-align: center;
+}
+
+/* p.capitalize {
+  text-transform: capitalize;
+} */
+
