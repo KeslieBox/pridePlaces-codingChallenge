@@ -27,34 +27,32 @@ const Background = styled.div`
 `;
 
 const ModalWrapper = styled.div`
-  width: 580px;
-  height: 500px;
-  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
-  background: #fff;
-  color: #000;
-  display: grid;
-  position: relative;
-  z-index: 10;
-  border-radius: 10px;
-//   padding: 60px;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
+    background: blue;
+    color: #000;
+    z-index: 10;
+    border-radius: 10px;
+    padding: 60px;
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    box-sizing:border-box;
+    width:580px;
+    height: 500px;
+    max-height:calc(100vh - 200px);
 `;
 
 const ModalContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  line-height: 1.8;
-  color: #141414;
-  p {
-    margin-bottom: 1rem;
-  }
-  button {
-    padding: 10px 24px;
-    background: #141414;
-    color: #fff;
-    border: none;
-  }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.8;
+    color: #141414;
+    p {
+        margin-bottom: 1rem;
+    }
 `;
 
 const CloseModalButton = styled(MdClose)`
@@ -114,7 +112,7 @@ export const Modal = ({ showModal, setShowModal, user, post }) => {
                 <h1>{user && user.name}</h1>
                 <h2>with {user && user.company.name}</h2>
                 <h3>{user && user.company.catchPhrase}</h3><br/>
-                <p>{post.title.charAt(0).toUpperCase() + post.title.slice(1)}: </p>
+                <p>{post.title}: </p>
                 <p>{post.body}</p>
               </ModalContent>
               <CloseModalButton

@@ -12,13 +12,13 @@ const Container = styled.div`
 `;
 
 const Li = styled.li`
-  min-width: 100px;
-  padding: 16px 32px;
-  border-radius: 4px;
-  border: none;
-  background: #141414;
-  color: #fff;
-  font-size: 24px;
+//   min-width: 100px;
+//   padding: 16px 32px;
+//   border-radius: 4px;
+//   border: none;
+//   background: #141414;
+//   color: #fff;
+//   font-size: 24px;
   cursor: pointer;
 `;
 
@@ -60,15 +60,14 @@ export default function Posts() {
         <div className='posts'>
             <ul id='posts-ul'>
             {posts && posts.map((post, i) => {
-                debugger
+                const capitalizePost = post.title.charAt(0).toUpperCase() + post.title.slice(1)
                 return (
                     <Li key={i} id={post.userId} onClick={() => openModal(post)}>
-                        {post.title}
+                        {capitalizePost}
                     </Li>
                 )
             })}
             </ul>
-            {/* need to send current post to modal */}
             <Modal showModal={showModal} setShowModal={setShowModal} user={user} post={post}/>
             <GlobalStyle />
         </div>

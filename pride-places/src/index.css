@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: lightblue;
 }
 
 code {
@@ -15,7 +16,7 @@ code {
 #posts-ul {
   position: absolute;
   margin-top: -34%;
-  margin-left: -11%; 
+  margin-left: -45%; 
 }
 
 /* #modal {
@@ -30,4 +31,5 @@ p {
 /* p.capitalize {
   text-transform: capitalize;
 } */
+
 
