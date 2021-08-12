@@ -3,16 +3,16 @@ import { useSpring, animated } from 'react-spring';
 import { Background, ModalWrapper, ModalContent, CloseModalButton } from '../styles/modalStyle';
 
 // sending props of modal, post and user state from Posts component
-export const Modal = ({ showModal, setShowModal, user, post }) => {
+export function Modal ({ showModal, setShowModal, user, post }){
   const modalRef = useRef()
 
   // animation for fade in modal effect
   const animation = useSpring({
     config: {
-      duration: 250
+      duration: 300
     },
     opacity: showModal ? 1 : 0,
-    transform: showModal ? `translateY(0%)` : `translateY(-100%)`
+    transform: showModal ? `translateX(0%)` : `translateX(-100%)`
   })
 
   // event handler to close modal if close icon is clicked
