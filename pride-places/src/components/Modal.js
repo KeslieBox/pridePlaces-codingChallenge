@@ -33,7 +33,7 @@ export function Modal ({ showModal, setShowModal, user, post, title }){
                 <h1>{user.name}</h1>
                 <h2>{user.company.name}</h2>
                 <h3>{user.company.catchPhrase}</h3>
-                <text>{title.charAt(0).toUpperCase() + title.slice(1)}: </text>
+                <p><b>{title.charAt(0).toUpperCase() + title.slice(1)}: </b></p>
                 <p>{post.body}</p>
               </ModalContent>
               <CloseModalButton

@@ -31,6 +31,9 @@ export const ModalContent = styled.div`
     line-height: 1.2;
     max-height: calc(100vh - 125px);
     text-align: center;
+    p {
+        font-size: 17px
+    }
 `
 
 export const CloseModalButton = styled(MdClose)`
