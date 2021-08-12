@@ -3,7 +3,7 @@ import { useSpring, animated } from 'react-spring';
 import { Background, ModalWrapper, ModalContent, CloseModalButton } from '../styles/modalStyle';
 
 // sending props of modal, post and user state from Posts component
-export function Modal ({ showModal, setShowModal, user, post }){
+export function Modal ({ showModal, setShowModal, user, post, title }){
   const modalRef = useRef()
 
   // animation for fade in modal effect
@@ -30,10 +30,10 @@ export function Modal ({ showModal, setShowModal, user, post }){
           <animated.div style={animation}>
             <ModalWrapper showModal={showModal}>
               <ModalContent>
-                <h1>{user && user.name}</h1>
-                <h2>with {user && user.company.name}</h2>
-                <h3>{user && user.company.catchPhrase}</h3>
-                <p>{post.title}: </p>
+                <h1>{user.name}</h1>
+                <h2>{user.company.name}</h2>
+                <h3>{user.company.catchPhrase}</h3>
+                <text>{title.charAt(0).toUpperCase() + title.slice(1)}: </text>
                 <p>{post.body}</p>
               </ModalContent>
               <CloseModalButton

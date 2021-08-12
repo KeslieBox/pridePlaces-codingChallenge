@@ -7,7 +7,7 @@ export const Background = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: calc(-500px);
+    margin-top: calc(-530px);
 `
 
 export const ModalWrapper = styled.div`
