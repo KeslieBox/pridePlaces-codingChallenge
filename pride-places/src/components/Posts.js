@@ -1,13 +1,12 @@
 import React, {useState, useEffect} from 'react'
 // import MyModal from './Modal'
-import GlobalStyle from '../globalStyles'
 import styled from 'styled-components';
 import { Modal } from './Modal';
 
 const Container = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
+//   justify-content: left;
+  align-items: left;
   height: 100vh;
 `;
 
@@ -27,22 +26,14 @@ export default function Posts() {
     const [post, setPost] = useState([])
     const [user, setUser] = useState([])
     const [showModal,setShowModal] = useState(false);
-    // const fetchData = async (url) => {
-    //     const response = await fetch(url)
-    //     const data = await response.json()
-    //     setData(data)
-    //     debugger
-    // }
+
     const openModal = async(post) => {
-        // setShowModal(prev => !prev)
         const resp = await fetch(`https://jsonplaceholder.typicode.com/users/${post.userId}`)
         const user = await resp.json()
         setUser(user)
         setPost(post)
         setShowModal(prev => !prev)
-        // send user with userId to a modal
-        debugger
-
+        
     }
 
     useEffect(() => {
@@ -51,13 +42,12 @@ export default function Posts() {
             const data = await resp.json()
             setPosts(data)
         })()
-    }, [])
-
-    
-     
+    }, []) 
 
     return (
-        <div className='posts'>
+        <>
+        <Container>
+        {/* <div className='posts'> */}
             <ul id='posts-ul'>
             {posts && posts.map((post, i) => {
                 const capitalizePost = post.title.charAt(0).toUpperCase() + post.title.slice(1)
@@ -68,9 +58,10 @@ export default function Posts() {
                 )
             })}
             </ul>
+            {/* </div> */}
+            </Container>
             <Modal showModal={showModal} setShowModal={setShowModal} user={user} post={post}/>
-            <GlobalStyle />
-        </div>
+        </>
     )
     // }
 

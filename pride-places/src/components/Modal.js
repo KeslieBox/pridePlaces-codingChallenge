@@ -1,46 +1,34 @@
-// import React from 'react'
-// // import Modal from 'react-modal'
-
-// export default function MyModal({showModal, setShowModal}){
-//     return ( 
-//         <>
-//         {showModal ? <div>Modal</div> : null}
-//         </>
-//     ) 
-        
-// }
-
-
 import React, { useRef, useEffect, useCallback } from 'react';
 import { useSpring, animated } from 'react-spring';
 import styled from 'styled-components';
 import { MdClose } from 'react-icons/md';
 
 const Background = styled.div`
-//   width: 100%;
-//   height: 100%;
-//   background: rgba(0, 0, 0, 0.8);
-//   position: fixed;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
+    width: 100%;
+    height: -10%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -20%;
 `;
 
 const ModalWrapper = styled.div`
     box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
-    background: blue;
+    background: lightblue;
     color: #000;
     z-index: 10;
+    border: 10px solid black;
     border-radius: 10px;
-    padding: 60px;
-    position:fixed;
+    padding: 40px;
+    position:relative;
     top:50%;
     left:50%;
-    transform:translate(-50%,-50%);
-    box-sizing:border-box;
-    width:580px;
-    height: 500px;
-    max-height:calc(100vh - 200px);
+    transform:translate(-50%,-90%);
+    width:500px;
+    height: auto
+    // max-height:calc(100vh - 100px);
+    // margin-top: calc(100vh - 1000px);
 `;
 
 const ModalContent = styled.div`
@@ -50,6 +38,8 @@ const ModalContent = styled.div`
     align-items: center;
     line-height: 1.8;
     color: #141414;
+    // overflow:auto;
+    max-height:calc(100vh - 125px);
     p {
         margin-bottom: 1rem;
     }
