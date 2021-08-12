@@ -1,12 +1,12 @@
 import React, {useState, useEffect} from 'react'
-import { Modal } from './Modal';
-import { Container, Li } from '../styles/postStyle';
+import { Modal } from './Modal'
+import { Container, Li } from '../styles/postStyle'
 
 export default function Posts() {
     const [posts, setPosts] = useState([])
     const [post, setPost] = useState([])
     const [user, setUser] = useState([])
-    const [showModal,setShowModal] = useState(false);
+    const [showModal, setShowModal] = useState(false)
 
     // click event fetches user with user id of clicked post
     const openModal = async(post) => {
