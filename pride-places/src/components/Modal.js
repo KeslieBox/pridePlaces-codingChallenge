@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useCallback } from 'react';
+import React, { useRef} from 'react';
 import { useSpring, animated } from 'react-spring';
 import { Background, ModalWrapper, ModalContent, CloseModalButton } from '../styles/modalStyle';
 

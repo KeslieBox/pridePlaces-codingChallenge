@@ -1,14 +1,18 @@
 import React, {useState, useEffect} from 'react'
-// import { Modal } from './Modal'
-import Modal  from './Modal2'
 import { Container, Li } from '../styles/postStyle'
-
+import 'react-responsive-modal/styles.css';
+import { Modal } from 'react-responsive-modal';
+import modalStyle from '../styles/modalStyle2';
 
 export default function Posts() {
     const [posts, setPosts] = useState([])
     const [post, setPost] = useState([])
     const [user, setUser] = useState([])
     const [showModal, setShowModal] = useState(false)
+    const [open, setOpen] = useState(false);
+
+    const onOpenModal = () => setOpen(true);
+    const onCloseModal = () => setOpen(false);
 
     // click event fetches user with user id of clicked post
     const openModal = async(userId, post) => {
@@ -38,14 +42,17 @@ export default function Posts() {
                 {posts && posts.map((post, i) => {
                     const capitalizedTitle = post.title.charAt(0).toUpperCase() + post.title.slice(1)
                     return (
-                        <Li key={i} id={post.userId} onClick={() => openModal(post.userId, post)}>
+                        <Li key={i} id={post.userId} onClick={() => onOpenModal(post.userId, post)}>
                             {capitalizedTitle}
                         </Li>
                     )
                 })}
                 </ul>
             </Container>
-            <Modal showModal={showModal} setShowModal={setShowModal} user={user} post={post} title={post.title}/>
+            {/* <button onClick={onOpenModal}>Open modal</button> */}
+            <Modal open={open} onClose={onCloseModal} center>
+                <h2>Simple centered modal</h2>
+            </Modal>
         </>
     )  
 }

@@ -11,4 +11,5 @@ export const Li = styled.li`
   font-size: 18px;
   cursor: pointer;
   text-decoration: underline;
+  padding-right: 50px;
 `
