@@ -14,7 +14,7 @@ export default function Modal ({ showModal, setShowModal, user, post, title }){
     transform: showModal ? `translateX(0%)` : `translateX(-100%)`
   }) 
 
-  // if showModal is true, render Modal component, else return null
+  // if showModal is set to true, render Modal component, else return null
   return (
     <>
       {showModal ? (
