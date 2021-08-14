@@ -4,18 +4,15 @@ import useStyles from "../styles/modalStyle";
 
 // sending props of modal, post and user state from Posts component
 export default function Modal ({ showModal, setShowModal, user, post, title }){
-    const modal = useRef()
-    const classes = useStyles();
+  const modal = useRef()
+  const classes = useStyles();
 
   // animation for fade in modal effect
-    const animation = useSpring({
-        config: {duration: 300},
-        opacity: showModal ? 1 : 0,
-        transform: showModal ? `translateX(0%)` : `translateX(-100%)`
-    })
-
-  // event handler to close modal if close icon or background is clicked
- 
+  const animation = useSpring({
+    config: {duration: 300},
+    opacity: showModal ? 1 : 0,
+    transform: showModal ? `translateX(0%)` : `translateX(-100%)`
+  }) 
 
   // if showModal is true, render Modal component, else return null
   return (
@@ -30,10 +27,9 @@ export default function Modal ({ showModal, setShowModal, user, post, title }){
                                 <h3>{user.company.catchPhrase}</h3>
                                     <p><b>{title.charAt(0).toUpperCase() + title.slice(1)}:</b></p>
                                         <p>{post.body}</p>
-                        <button
-                            type="button"
-                            className={classes.closeButton}
-                            onClick={() => setShowModal(false)}
+                        <button 
+                          className={classes.closeButton}
+                          onClick={() => setShowModal(false)}
                         />
                     </animated.div>
                 </div>

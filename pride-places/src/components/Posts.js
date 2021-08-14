@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import Modal  from './Modal'
-import { Container, Li } from '../styles/postStyle'
-import useStyles from "../styles/postStyle2";
+import useStyles from "../styles/postStyle";
 
 export default function Posts() {
     const [posts, setPosts] = useState([])
