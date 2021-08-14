@@ -48,14 +48,7 @@ import { createUseStyles } from 'react-jss'
 
 
 const modalStyle = createUseStyles({
-    // Prevent page scrolling when modal is open
-    "@global": {
-      body: {
-        overflow: "hidden"
-      }
-    },
 
-    // do i need this??
     background: {
         width: '100%',
         position: 'fixed',
