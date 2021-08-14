@@ -40,6 +40,7 @@ const modalStyle = createUseStyles({
         boxShadow: [0, 0, "0.625rem", "rgba(0, 0, 0, 0.2)"],
         position: "relative",
         padding: "1rem",
+        // paddingTop: '1rem',
 
         "@media (min-width: 576px)": {
             width: "32rem",
@@ -53,7 +54,7 @@ const modalStyle = createUseStyles({
     closeButton: {
         position: "absolute",
         zIndex: 1,
-        top: '-25px',
+        top: '-19px',
         right: 0,
         backgroundColor: "lightblue",
         width: "1.5rem",
@@ -71,7 +72,7 @@ const modalStyle = createUseStyles({
         "&:before, &:after": {
           content: '""',
           position: "absolute",
-          top: "10px",
+          top: "23px",
           left: "0.25rem",
           width: "1rem",
           height: "0.1rem",
