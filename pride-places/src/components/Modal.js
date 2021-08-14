@@ -19,21 +19,18 @@ export default function Modal ({ showModal, setShowModal, user, post, title }){
     <>
       {showModal ? (
         <div className={classes.background} onClick={() => setShowModal(false)}>
-            <div className={classes.modalWrapper}>
-                <div className={classes.modal} ref={modal}>
-                    <animated.div style={animation}>
-                        <h1>{user.name}</h1>
-                            <h2>{user.company.name}</h2>
-                                <h3>{user.company.catchPhrase}</h3>
-                                    <p><b>{title.charAt(0).toUpperCase() + title.slice(1)}:</b></p>
-                                        <p>{post.body}</p>
-                        <button 
-                          className={classes.closeButton}
-                          onClick={() => setShowModal(false)}
-                        />
-                    </animated.div>
-                </div>
+          <div className={classes.modalWrapper}>
+            <div className={classes.modal} ref={modal}>
+              <animated.div style={animation}>
+                <button className={classes.closeButton} onClick={() => setShowModal(false)} />
+                <h1>{user.name}</h1>
+                  <h2>{user.company.name}</h2>
+                    <h3>{user.company.catchPhrase}</h3>
+                      <p><b>{title.charAt(0).toUpperCase() + title.slice(1)}:</b></p>
+                      <p>{post.body}</p>
+              </animated.div>
             </div>
+          </div>
         </div>
       ) : null}
     </>
