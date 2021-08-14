@@ -44,6 +44,7 @@ export default function Posts() {
                 })}
                 </ul>
             </div>
+            {/* display modal content if showModal is set to true */}
             <Modal showModal={showModal} setShowModal={setShowModal} user={user} post={post} title={post.title}/>
         </>
     )  

@@ -1,5 +1,3 @@
-import styled from 'styled-components'
-import { MdClose } from 'react-icons/md'
 import { createUseStyles } from 'react-jss'
 
 const modalStyle = createUseStyles({
