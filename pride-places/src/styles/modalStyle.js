@@ -33,11 +33,7 @@ const modalStyle = createUseStyles({
         alignItems: 'center',
         border: '10px solid black',
         borderRadius: '10px',
-        lineHeight: 1.2,
         textAlign: 'center',
-        p: {
-            fontSize: '17px',
-        },
         maxWidth: 'calc(500px)',
         height: 'auto',
         backgroundColor: "#add8e6",
@@ -46,7 +42,7 @@ const modalStyle = createUseStyles({
         padding: "1rem",
 
         "@media (min-width: 576px)": {
-            width: "32rem"
+            width: "32rem",
         },
 
         "& p:last-of-type": {
@@ -57,16 +53,16 @@ const modalStyle = createUseStyles({
     closeButton: {
         position: "absolute",
         zIndex: 1,
-        top: 0,
+        top: '-25px',
         right: 0,
-        backgroundColor: "#34363a",
-        width: "2.5rem",
-        height: "2.5rem",
+        backgroundColor: "lightblue",
+        width: "1.5rem",
+        height: "1.5rem",
         padding: 0,
         border: 0,
         cursor: "pointer",
         outline: 0,
-        boxShadow: [0, 0, "0.625rem", "rgba(0, 0, 0, 0.1)"],
+        // boxShadow: [0, 0, "0.625rem", "rgba(0, 0, 0, 0.1)"],
     
         "&:hover": {
           backgroundColor: "#424f63"
@@ -75,11 +71,11 @@ const modalStyle = createUseStyles({
         "&:before, &:after": {
           content: '""',
           position: "absolute",
-          top: "1.2rem",
+          top: "10px",
           left: "0.25rem",
-          width: "2rem",
+          width: "1rem",
           height: "0.1rem",
-          backgroundColor: "#fff"
+          backgroundColor: "black"
         },
     
         "&:before": {
