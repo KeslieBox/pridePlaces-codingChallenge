@@ -1,11 +1,11 @@
 import { useSpring, animated } from 'react-spring';
 import React, { useRef } from "react";
-import useStyles from "../styles/modalStyle";
+import useModalStyle from "../styles/modalStyle";
 
 // sending props of modal, post and user state from Posts component
 export default function Modal ({ showModal, setShowModal, user, post, title }){
   const modal = useRef()
-  const classes = useStyles();
+  const classes = useModalStyle();
 
   // animation for fade in modal effect
   const animation = useSpring({

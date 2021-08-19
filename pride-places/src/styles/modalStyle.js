@@ -1,6 +1,6 @@
 import { createUseStyles } from 'react-jss'
 
-const modalStyle = createUseStyles({
+const useModalStyle = createUseStyles({
 
     background: {
         width: '100%',
@@ -28,6 +28,7 @@ const modalStyle = createUseStyles({
         overflowY: "auto"
     },
 
+    // adjustable modal for all size screens
     modal: {
         justifyContent: 'center',
         alignItems: 'center',
@@ -44,10 +45,6 @@ const modalStyle = createUseStyles({
         "@media (min-width: 576px)": {
             width: "32rem",
         },
-
-        "& p:last-of-type": {
-            marginBottom: 0
-        }
     },
 
     closeButton: {
@@ -77,6 +74,7 @@ const modalStyle = createUseStyles({
           backgroundColor: "black"
         },
     
+        // don't think I need this??
         "&:before": {
           transform: "rotate(45deg)"
         },
@@ -87,4 +85,4 @@ const modalStyle = createUseStyles({
       }
     })
 
-    export default modalStyle;
+    export default useModalStyle;

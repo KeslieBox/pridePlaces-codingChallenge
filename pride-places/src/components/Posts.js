@@ -34,14 +34,14 @@ export default function Posts() {
             <div classeName={classes.container}>
                 <ul id='posts-ul'>
                     {/* iterate through all posts and display as li */}
-                {posts && posts.map((post, i) => {
-                    const capitalizedTitle = post.title.charAt(0).toUpperCase() + post.title.slice(1)
-                    return (
-                        <div className={classes.li} key={i} id={post.userId} onClick={() => openModal(post.userId, post)}>
-                            {capitalizedTitle}
-                        </div>
-                    )
-                })}
+                    {posts && posts.map((post, i) => {
+                        const capitalizedTitle = post.title.charAt(0).toUpperCase() + post.title.slice(1)
+                        return (
+                            <li className={classes.li} key={i} id={post.userId} onClick={() => openModal(post.userId, post)}>
+                                {capitalizedTitle}
+                            </li>
+                        )
+                    })}
                 </ul>
             </div>
             {/* display modal content if showModal is set to true */}
