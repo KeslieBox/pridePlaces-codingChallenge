@@ -9,7 +9,7 @@ export default function Posts() {
     const [showModal, setShowModal] = useState(false)
     const classes = useStyles();
 
-    // click event fetches user with user id of author of clicked post
+    // click event fetches user with user id of the author of the clicked post
     const openModal = async(userId, post) => {
         const resp = await fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
         const user = await resp.json()
